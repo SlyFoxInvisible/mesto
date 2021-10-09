@@ -1,0 +1,34 @@
+.popup__text-vocation {
+  color: #000;
+  border: none;
+  font-size: 14px;
+  line-height: 17px;
+  font-weight: normal;
+  border-bottom: 1px solid #000;
+  max-width: 358px;
+  width: 100%;
+  min-height: 14px;
+
+  margin: 0;
+  padding: 0;
+  margin: 0 0 30px 9%;
+  padding-bottom: 13px;
+}
+
+.popup__text-vocation:last-of-type {
+  margin-bottom: 48px;
+}
+
+.popup__text-vocation:focus {
+  outline: none;
+}
+
+.popup__text-vocation::placeholder {
+  color: #000;
+}
+
+@media screen and (max-width: 768px) {
+  .popup__text-vocation {
+    max-width: 238px;
+  }
+}
