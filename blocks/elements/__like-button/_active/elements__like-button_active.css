@@ -1,16 +1,16 @@
 .elements__like-button_active {
-  margin: 0;
+  /*margin: 0;*/
   background-image: url(../../../../images/like_active.svg);
-  background-position: 50%;
-  border: 0;
-  background-size: contain;
-  background-repeat: no-repeat;
-  width: 22px;
-  height: 19px;
-  background-color: transparent;
-  cursor: pointer;
+  /*background-position: 50%;*/
+  /*border: 0;*/
+  /*background-size: contain;*/
+  /*background-repeat: no-repeat;*/
+  /*width: 22px;*/
+  /*height: 19px;*/
+  /*background-color: transparent;*/
+  /*cursor: pointer;*/
 }
 
-.elements__like-button_active:hover {
-  opacity: 0.6;
-}
+/*.elements__like-button_active:hover {*/
+/*  opacity: 0.5;*/
+/*}*/

@@ -1,8 +1,10 @@
 .elements__info {
+  margin: 0;
   background-color: #fff;
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
-  height: 79px;
+  /*height: 79px;*/
+  padding: 25px 0 31px 0;
 }

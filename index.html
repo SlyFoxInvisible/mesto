@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./pages/index.css" />
-    <title>Mesto</title>
+    <title>Место</title>
   </head>
   <body class="page">
     <div class="page__content">
@@ -44,12 +44,11 @@
               />
               <div class="elements__info">
                 <h2 class="elements__text">Пятигорск</h2>
-                <div class="elements__like">
                   <button
+                    type="button"
                     title="Поставить лайк"
                     class="elements__like-button elements__like-button_active"
                   ></button>
-                </div>
               </div>
             </li>
             <li class="elements__content-item">
@@ -138,11 +137,12 @@
         </footer>
         <div class="popup">
           <div class="popup__content">
-            <button class="popup__close"></button>
+            <button type="button" class="popup__close"></button>
             <h3 class="popup__title">Редактировать профиль</h3>
+            <form name="edit__profile">
             <div class="popup__text">
               <input
-                name="text"
+                type="text"
                 placeholder="Укажите Ваше имя"
                 class="popup__text-name"
                 maxlength="35"
@@ -154,7 +154,8 @@
                 maxlength="35"
               />
             </div>
-            <button class="popup__save">Сохранить</button>
+            <button type="button" class="popup__save">Сохранить</button>
+            </form>
           </div>
         </div>
       </main>

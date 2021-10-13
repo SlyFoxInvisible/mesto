@@ -9,8 +9,9 @@
   height: 19px;
   background-color: transparent;
   cursor: pointer;
+  margin-right: 15px;
 }
 
 .elements__like-button:hover {
-  opacity: 0.6;
+  opacity: 0.5;
 }
