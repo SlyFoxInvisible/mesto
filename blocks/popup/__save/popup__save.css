@@ -8,7 +8,7 @@
   border-color: transparent;
   color: #fff;
   border-radius: 2px;
-  margin: 0 0 37px 9%;
+  margin: 0 8.5% 37px 8.5%;
 }
 
 .popup__save:hover {
@@ -20,5 +20,6 @@
   .popup__save {
     width: 238px;
     height: 46px;
+    margin: 0 8% 25px 8%;
   }
 }

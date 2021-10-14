@@ -6,4 +6,13 @@
     column-gap: 18px;
     grid-template-areas: "name edit-button" "vocation vocation";
     align-items: baseline;
+    max-width: 282px;
+
+}
+
+@media screen and (max-width: 768px)  {
+    .profile__info {
+        row-gap: 14px;
+        column-gap: 10px;
+    }
 }
