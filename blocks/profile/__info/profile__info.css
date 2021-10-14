@@ -6,8 +6,7 @@
     column-gap: 18px;
     grid-template-areas: "name edit-button" "vocation vocation";
     align-items: baseline;
-    max-width: 282px;
-
+    /*max-width: 282px;*/
 }
 
 @media screen and (max-width: 768px)  {

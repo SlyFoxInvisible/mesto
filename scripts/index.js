@@ -8,15 +8,28 @@ const textVocation = document.querySelector('.profile__info .profile__vocation')
 const inputName = document.querySelector('.popup__text .popup__input_text_name');
 const inputVocation = document.querySelector('.popup__text .popup__input_text_vocation');
 
-function toggleModalWindow() {
-    modalWindow.classList.toggle('popup_is-opened');
 
+
+function toggleModalWindow() {
+    modalWindow.classList.add('popup_is-opened');
     inputName.value = textName.textContent;
     inputVocation.value = textVocation.textContent;
-
 }
 
+function toggleModalWindowClose() {
+    modalWindow.classList.remove('popup_is-opened');
+}
 
+var elementForm = document.querySelector('.popup__form');
+elementForm.addEventListener('submit', function(e) {
+    e.preventDefault();
+    textName.textContent = inputName.value;
+    textVocation.textContent = inputVocation.value;
+    modalWindow.classList.remove('popup_is-opened');
+});
+
+profileEditBtn.addEventListener('click', toggleModalWindow);
+modalWindowCloseBtn.addEventListener('click', toggleModalWindowClose);
 
 
 
@@ -27,12 +40,3 @@ function toggleModalWindow() {
 //     textVocation.textContent = inputVocation.value;
 // }
 
-var elementForm = document.querySelector('.popup__form');
-elementForm.addEventListener('submit', function() {
-   event.preventDefault();
-    textName.textContent = inputName.value;
-    textVocation.textContent = inputVocation.value;
-});
-
-profileEditBtn.addEventListener('click', toggleModalWindow);
-modalWindowCloseBtn.addEventListener('click', toggleModalWindow);
