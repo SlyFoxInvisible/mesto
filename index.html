@@ -47,7 +47,7 @@
                   <button
                     type="button"
                     title="Поставить лайк"
-                    class="elements__like-button elements__like-button_active"
+                    class="elements__like-button"
                   ></button>
               </div>
             </li>
@@ -61,6 +61,7 @@
                 <h2 class="elements__text">Санкт-Петербург</h2>
                 <div class="elements__like">
                   <button
+                          type="button"
                     title="Поставить лайк"
                     class="elements__like-button"
                   ></button>
@@ -78,6 +79,7 @@
                 <div class="elements__like">
                   <button
                     title="Поставить лайк"
+                    type="button"
                     class="elements__like-button"
                   ></button>
                 </div>
@@ -157,6 +159,32 @@
               />
             </div>
             <button type="submit" class="popup__save">Сохранить</button>
+            </form>
+          </div>
+        </div>
+
+        <div class="window">
+          <div class="window__content">
+            <button type="button" class="window__close"></button>
+            <h3 class="window__title">Новое место</h3>
+            <form class="window__form">
+              <div class="window__text">
+                <input
+                        type="text"
+                        name="input-name-new"
+                        placeholder="Название"
+                        class="window__input window__input_text"
+                        maxlength="35"
+                />
+                <input
+                        type="text"
+                        name="window-src"
+                        placeholder="Ссылка на картинку"
+                        class="window__input window__input_text_src"
+                        maxlength="35"
+                />
+              </div>
+              <button type="submit" class="window__create">Создать</button>
             </form>
           </div>
         </div>

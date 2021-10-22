@@ -9,7 +9,6 @@ const inputName = document.querySelector('.popup__text .popup__input_text_name')
 const inputVocation = document.querySelector('.popup__text .popup__input_text_vocation');
 
 
-
 function toggleModalWindow() {
     modalWindow.classList.add('popup_is-opened');
     inputName.value = textName.textContent;
@@ -20,7 +19,7 @@ function toggleModalWindowClose() {
     modalWindow.classList.remove('popup_is-opened');
 }
 
-var elementForm = document.querySelector('.popup__form');
+const elementForm = document.querySelector('.popup__form');
 elementForm.addEventListener('submit', function(e) {
     e.preventDefault();
     textName.textContent = inputName.value;
@@ -28,15 +27,11 @@ elementForm.addEventListener('submit', function(e) {
     modalWindow.classList.remove('popup_is-opened');
 });
 
+
+
+
 profileEditBtn.addEventListener('click', toggleModalWindow);
 modalWindowCloseBtn.addEventListener('click', toggleModalWindowClose);
 
 
-
-
-// document.querySelector('.popup__save').onclick = function(){
-//     event.preventDefault();
-//     textName.textContent = inputName.value;
-//     textVocation.textContent = inputVocation.value;
-// }
 
