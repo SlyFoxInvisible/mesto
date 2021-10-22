@@ -8,6 +8,23 @@ const textVocation = document.querySelector('.profile__info .profile__vocation')
 const inputName = document.querySelector('.popup__text .popup__input_text_name');
 const inputVocation = document.querySelector('.popup__text .popup__input_text_vocation');
 
+const popupWindow = document.querySelector('.window');
+const popupWindowCloseBtn = document.querySelector('.window__close');
+
+const windowCreateBtn = document.querySelector('.window__form');
+
+const profileCreateBtn = document.querySelector('.profile__add-button');
+
+
+
+function windowOpened() {
+    popupWindow.classList.add('window_is-opened');
+}
+
+function windowCloses() {
+    popupWindow.classList.remove('window_is-opened');
+}
+
 
 function toggleModalWindow() {
     modalWindow.classList.add('popup_is-opened');
@@ -29,9 +46,17 @@ elementForm.addEventListener('submit', function(e) {
 
 
 
+windowCreateBtn.addEventListener('submit', function (event) {
+    event.preventDefault();
+});
+
+
+
 
 profileEditBtn.addEventListener('click', toggleModalWindow);
 modalWindowCloseBtn.addEventListener('click', toggleModalWindowClose);
+profileCreateBtn.addEventListener('click', windowOpened);
+popupWindowCloseBtn.addEventListener('click', windowCloses);
 
 
 

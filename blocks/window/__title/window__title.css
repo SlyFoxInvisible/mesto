@@ -1,0 +1,17 @@
+.window__title {
+    padding: 0;
+    max-width: 330px;
+    /*min-height: 23px;*/
+    /* word-break: break-all; */
+    margin: 34px 0 54px 9%;
+    font-size: 24px;
+    line-height: 29px;
+}
+
+@media screen and (max-width: 768px) {
+    .window__title {
+        max-width: 238px;
+        font-size: 18px;
+        line-height: 22px;
+    }
+}
