@@ -1,4 +1,5 @@
 .elements__content-item {
+  position: relative;
   border-radius: 10px;
   display: flex;
   flex-direction: column;

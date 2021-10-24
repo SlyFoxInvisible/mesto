@@ -10,12 +10,15 @@ const inputVocation = document.querySelector('.popup__text .popup__input_text_vo
 
 const popupWindow = document.querySelector('.window');
 const popupWindowCloseBtn = document.querySelector('.window__close');
+// const windowCreate = document.querySelector('.window__create');
+
+// Загрузка карточек
+
+
 
 const windowCreateBtn = document.querySelector('.window__form');
 
 const profileCreateBtn = document.querySelector('.profile__add-button');
-
-
 
 
 //Создает массив с обработчиками для форм, чтобы откликались на нажатие кнопки мыши и клавишу Enter
@@ -66,7 +69,9 @@ event_list.forEach(function (e){
         popupWindow.classList.remove('window_is-opened') ;
 
     })
-})
+});
+
+
 
 
 // Вызов функций

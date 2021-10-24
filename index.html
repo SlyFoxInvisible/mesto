@@ -35,45 +35,49 @@
           ></button>
         </section>
         <section class="elements">
-          <ul class="elements__content">
-            <li class="elements__content-item">
+          <!--          <template id="elements__template">-->
+          <div class="elements__content">
+            <div class="elements__content-item">
               <img
                 class="elements__image"
                 src="./images/pyatigorsk.jpg"
                 alt="Пятигорск"
               />
+              <button type="button" class="elements__delete-button"></button>
               <div class="elements__info">
                 <h2 class="elements__text">Пятигорск</h2>
-                  <button
-                    type="button"
-                    title="Поставить лайк"
-                    class="elements__like-button"
-                  ></button>
+                <button
+                  type="button"
+                  title="Поставить лайк"
+                  class="elements__like-button"
+                ></button>
               </div>
-            </li>
-            <li class="elements__content-item">
+            </div>
+            <div class="elements__content-item">
               <img
                 class="elements__image"
                 src="./images/sankt-petersburg.jpg"
                 alt="Санкт-Петербург"
               />
+              <button type="button" class="elements__delete-button"></button>
               <div class="elements__info">
                 <h2 class="elements__text">Санкт-Петербург</h2>
                 <div class="elements__like">
                   <button
-                          type="button"
+                    type="button"
                     title="Поставить лайк"
                     class="elements__like-button"
                   ></button>
                 </div>
               </div>
-            </li>
-            <li class="elements__content-item">
+            </div>
+            <div class="elements__content-item">
               <img
                 class="elements__image"
                 src="./images/dublin.jpg"
                 alt="Дублин"
               />
+              <button type="button" class="elements__delete-button"></button>
               <div class="elements__info">
                 <h2 class="elements__text">Дублин</h2>
                 <div class="elements__like">
@@ -84,13 +88,14 @@
                   ></button>
                 </div>
               </div>
-            </li>
-            <li class="elements__content-item">
+            </div>
+            <div class="elements__content-item">
               <img
                 class="elements__image"
                 src="./images/los-angeles.jpg"
                 alt="Лос-Анджелес"
               />
+              <button type="button" class="elements__delete-button"></button>
               <div class="elements__info">
                 <h2 class="elements__text">Лос-Анджелес</h2>
                 <div class="elements__like">
@@ -100,9 +105,10 @@
                   ></button>
                 </div>
               </div>
-            </li>
-            <li class="elements__content-item">
+            </div>
+            <div class="elements__content-item">
               <img class="elements__image" src="./images/kiyv.jpg" alt="Киев" />
+              <button type="button" class="elements__delete-button"></button>
               <div class="elements__info">
                 <h2 class="elements__text">Киев</h2>
                 <div class="elements__like">
@@ -112,13 +118,14 @@
                   ></button>
                 </div>
               </div>
-            </li>
-            <li class="elements__content-item">
+            </div>
+            <div class="elements__content-item">
               <img
                 class="elements__image"
                 src="./images/tokio.jpg"
                 alt="Токио"
               />
+              <button type="button" class="elements__delete-button"></button>
               <div class="elements__info">
                 <h2 class="elements__text">Токио</h2>
                 <div class="elements__like">
@@ -129,9 +136,11 @@
                   ></button>
                 </div>
               </div>
-            </li>
-          </ul>
+            </div>
+          </div>
+          <!--                  </template>-->
         </section>
+
         <footer class="footer">
           <p class="footer__author">
             &#169; 2021 Metro Russia Бакулин Владислав
@@ -142,23 +151,23 @@
             <button type="button" class="popup__close"></button>
             <h3 class="popup__title">Редактировать профиль</h3>
             <form class="popup__form" name="edit__profile">
-            <div class="popup__text">
-              <input
-                type="text"
-                name="input-name"
-                placeholder="Укажите Ваше имя"
-                class="popup__input popup__input_text_name"
-                maxlength="35"
-              />
-              <input
-                type="text"
-                name="input-vocation"
-                placeholder="Ваша профессия"
-                class="popup__input popup__input_text_vocation"
-                maxlength="35"
-              />
-            </div>
-            <button type="submit" class="popup__save">Сохранить</button>
+              <div class="popup__text">
+                <input
+                  type="text"
+                  name="input-name"
+                  placeholder="Укажите Ваше имя"
+                  class="popup__input popup__input_text_name"
+                  maxlength="35"
+                />
+                <input
+                  type="text"
+                  name="input-vocation"
+                  placeholder="Ваша профессия"
+                  class="popup__input popup__input_text_vocation"
+                  maxlength="35"
+                />
+              </div>
+              <button type="submit" class="popup__save">Сохранить</button>
             </form>
           </div>
         </div>
@@ -170,18 +179,18 @@
             <form class="window__form">
               <div class="window__text">
                 <input
-                        type="text"
-                        name="input-name-new"
-                        placeholder="Название"
-                        class="window__input window__input_text"
-                        maxlength="35"
+                  type="text"
+                  name="input-name-new"
+                  placeholder="Название"
+                  class="window__input window__input_text"
+                  maxlength="35"
                 />
                 <input
-                        type="text"
-                        name="window-src"
-                        placeholder="Ссылка на картинку"
-                        class="window__input window__input_text_src"
-                        maxlength="35"
+                  type="text"
+                  name="window-src"
+                  placeholder="Ссылка на картинку"
+                  class="window__input window__input_text_src"
+                  maxlength="35"
                 />
               </div>
               <button type="submit" class="window__create">Создать</button>
