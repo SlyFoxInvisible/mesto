@@ -1,204 +1,237 @@
 <!DOCTYPE html>
 <html lang="ru">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./pages/index.css" />
-    <title>Место</title>
-  </head>
-  <body class="page">
-    <div class="page__content">
-      <header class="header">
-        <img
-          class="header__logo"
-          src="./images/header-logo.svg"
-          alt="логотип"
-        />
-      </header>
-      <main class="content">
-        <section class="profile">
-          <img class="profile__avatar" src="./images/Avatar.svg" alt="Аватар" />
-          <div class="profile__info">
-            <h1 class="profile__name">Жак-Ив Кусто</h1>
-            <p class="profile__vocation">Исследователь океана</p>
-            <button
-              class="profile__edit-button"
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="./pages/index.css" />
+  <title>Место</title>
+</head>
+<body class="page">
+<div class="page__content">
+  <header class="header">
+    <img
+            class="header__logo"
+            src="./images/header-logo.svg"
+            alt="логотип"
+    />
+  </header>
+  <main class="content">
+    <section class="profile">
+      <img class="profile__avatar" src="./images/Avatar.svg" alt="Аватар" />
+      <div class="profile__info">
+        <h1 class="profile__name">Жак-Ив Кусто</h1>
+        <p class="profile__vocation">Исследователь океана</p>
+        <button
+                class="profile__edit-button"
+                type="button"
+                title="Редактировать профиль"
+        ></button>
+      </div>
+      <button
+              class="profile__add-button"
               type="button"
-              title="Редактировать профиль"
-            ></button>
-          </div>
-          <button
-            class="profile__add-button"
-            type="button"
-            title="Добавить новую фотографию"
-          ></button>
-        </section>
-        <section class="elements">
-          <!--          <template id="elements__template">-->
-          <div class="elements__content">
-            <div class="elements__content-item">
-              <img
-                class="elements__image"
-                src="./images/pyatigorsk.jpg"
-                alt="Пятигорск"
-              />
-              <button type="button" class="elements__delete-button"></button>
-              <div class="elements__info">
-                <h2 class="elements__text">Пятигорск</h2>
-                <button
-                  type="button"
-                  title="Поставить лайк"
-                  class="elements__like-button"
-                ></button>
-              </div>
-            </div>
-            <div class="elements__content-item">
-              <img
-                class="elements__image"
-                src="./images/sankt-petersburg.jpg"
-                alt="Санкт-Петербург"
-              />
-              <button type="button" class="elements__delete-button"></button>
-              <div class="elements__info">
-                <h2 class="elements__text">Санкт-Петербург</h2>
-                <div class="elements__like">
-                  <button
-                    type="button"
-                    title="Поставить лайк"
-                    class="elements__like-button"
-                  ></button>
-                </div>
-              </div>
-            </div>
-            <div class="elements__content-item">
-              <img
-                class="elements__image"
-                src="./images/dublin.jpg"
-                alt="Дублин"
-              />
-              <button type="button" class="elements__delete-button"></button>
-              <div class="elements__info">
-                <h2 class="elements__text">Дублин</h2>
-                <div class="elements__like">
-                  <button
-                    title="Поставить лайк"
-                    type="button"
-                    class="elements__like-button"
-                  ></button>
-                </div>
-              </div>
-            </div>
-            <div class="elements__content-item">
-              <img
-                class="elements__image"
-                src="./images/los-angeles.jpg"
-                alt="Лос-Анджелес"
-              />
-              <button type="button" class="elements__delete-button"></button>
-              <div class="elements__info">
-                <h2 class="elements__text">Лос-Анджелес</h2>
-                <div class="elements__like">
-                  <button
-                    title="Поставить лайк"
-                    class="elements__like-button"
-                  ></button>
-                </div>
-              </div>
-            </div>
-            <div class="elements__content-item">
-              <img class="elements__image" src="./images/kiyv.jpg" alt="Киев" />
-              <button type="button" class="elements__delete-button"></button>
-              <div class="elements__info">
-                <h2 class="elements__text">Киев</h2>
-                <div class="elements__like">
-                  <button
-                    title="Поставить лайк"
-                    class="elements__like-button"
-                  ></button>
-                </div>
-              </div>
-            </div>
-            <div class="elements__content-item">
-              <img
-                class="elements__image"
-                src="./images/tokio.jpg"
-                alt="Токио"
-              />
-              <button type="button" class="elements__delete-button"></button>
-              <div class="elements__info">
-                <h2 class="elements__text">Токио</h2>
-                <div class="elements__like">
-                  <button
-                    id="like"
-                    title="Поставить лайк"
-                    class="elements__like-button"
-                  ></button>
-                </div>
-              </div>
-            </div>
-          </div>
-          <!--                  </template>-->
-        </section>
+              title="Добавить новую фотографию"
+      ></button>
+    </section>
+    <section class="elements">
+      <ul class="elements__content">
 
-        <footer class="footer">
-          <p class="footer__author">
-            &#169; 2021 Metro Russia Бакулин Владислав
-          </p>
-        </footer>
-        <div class="popup">
-          <div class="popup__content">
-            <button type="button" class="popup__close"></button>
-            <h3 class="popup__title">Редактировать профиль</h3>
-            <form class="popup__form" name="edit__profile">
-              <div class="popup__text">
-                <input
-                  type="text"
-                  name="input-name"
-                  placeholder="Укажите Ваше имя"
-                  class="popup__input popup__input_text_name"
-                  maxlength="35"
-                />
-                <input
-                  type="text"
-                  name="input-vocation"
-                  placeholder="Ваша профессия"
-                  class="popup__input popup__input_text_vocation"
-                  maxlength="35"
-                />
-              </div>
-              <button type="submit" class="popup__save">Сохранить</button>
-            </form>
-          </div>
-        </div>
+      </ul>
+    </section>
+    <!--
+               <section class="elements">
 
-        <div class="window">
-          <div class="window__content">
-            <button type="button" class="window__close"></button>
-            <h3 class="window__title">Новое место</h3>
-            <form class="window__form">
-              <div class="window__text">
-                <input
-                  type="text"
-                  name="input-name-new"
-                  placeholder="Название"
-                  class="window__input window__input_text"
-                  maxlength="35"
-                />
-                <input
-                  type="text"
-                  name="window-src"
-                  placeholder="Ссылка на картинку"
-                  class="window__input window__input_text_src"
-                  maxlength="35"
-                />
-              </div>
-              <button type="submit" class="window__create">Создать</button>
-            </form>
+             <div class="elements__content">
+                 <div class="elements__content-item">
+                   <img
+                     class="elements__image"
+                     src="https://images.unsplash.com/photo-1575993494151-3de9981c040c?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1170&q=80"
+                     alt="Пятигорск"
+                   />
+                   <button type="button" class="elements__delete-button"></button>
+                   <div class="elements__info">
+                     <h2 class="elements__text">Пятигорск</h2>
+                     <button
+                       type="button"
+                       title="Поставить лайк"
+                       class="elements__like-button"
+                     ></button>
+                   </div>
+                 </div>
+                 <div class="elements__content-item">
+                   <img
+                     class="elements__image"
+                     src="https://images.unsplash.com/photo-1577887789303-d2510cc5e562?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1265&q=80"
+                     alt="Санкт-Петербург"
+                   />
+                   <button type="button" class="elements__delete-button"></button>
+                   <div class="elements__info">
+                     <h2 class="elements__text">Санкт-Петербург</h2>
+                     <div class="elements__like">
+                       <button
+                         type="button"
+                         title="Поставить лайк"
+                         class="elements__like-button"
+                       ></button>
+                     </div>
+                   </div>
+                 </div>
+                 <div class="elements__content-item">
+                   <img
+                     class="elements__image"
+                     src="https://images.unsplash.com/photo-1554391536-8c803d39f12f?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=464&q=80"
+                     alt="Дублин"
+                   />
+                   <button type="button" class="elements__delete-button"></button>
+                   <div class="elements__info">
+                     <h2 class="elements__text">Дублин</h2>
+                     <div class="elements__like">
+                       <button
+                         title="Поставить лайк"
+                         type="button"
+                         class="elements__like-button"
+                       ></button>
+                     </div>
+                   </div>
+                 </div>
+                 <div class="elements__content-item">
+                   <img
+                     class="elements__image"
+                     src="https://images.unsplash.com/photo-1544413660-299165566b1d?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=387&q=80"
+                     alt="Лос-Анджелес"
+                   />
+                   <button type="button" class="elements__delete-button"></button>
+                   <div class="elements__info">
+                     <h2 class="elements__text">Лос-Анджелес</h2>
+                     <div class="elements__like">
+                       <button
+                         title="Поставить лайк"
+                         class="elements__like-button"
+                       ></button>
+                     </div>
+                   </div>
+                 </div>
+                 <div class="elements__content-item">
+                   <img
+                     class="elements__image"
+                     src="https://images.unsplash.com/photo-1587812404957-aec0c99d47ef?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=435&q=80"
+                     alt="Киев"
+                   />
+                   <button type="button" class="elements__delete-button"></button>
+                   <div class="elements__info">
+                     <h2 class="elements__text">Киев</h2>
+                     <div class="elements__like">
+                       <button
+                         title="Поставить лайк"
+                         class="elements__like-button"
+                       ></button>
+                     </div>
+                   </div>
+                 </div>
+                 <div class="elements__content-item">
+                   <img
+                     class="elements__image"
+                     src="https://images.unsplash.com/photo-1443170412500-d04323a4eb57?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=387&q=80"
+                     alt="Токио"
+                   />
+                   <button type="button" class="elements__delete-button"></button>
+                   <div class="elements__info">
+                     <h2 class="elements__text">Токио</h2>
+                     <div class="elements__like">
+                       <button
+                         id="like"
+                         title="Поставить лайк"
+                         class="elements__like-button"
+                       ></button>
+                     </div>
+                   </div>
+                 </div>
+               </div>
+
+            </section>
+    -->
+
+    <footer class="footer">
+      <p class="footer__author">
+        &#169; 2021 Metro Russia Бакулин Владислав
+      </p>
+    </footer>
+    <div class="popup">
+      <div class="popup__content">
+        <button type="button" class="popup__close"></button>
+        <h3 class="popup__title">Редактировать профиль</h3>
+        <form class="popup__form" name="edit__profile">
+          <div class="popup__text">
+            <input
+                    type="text"
+                    name="input-name"
+                    placeholder="Укажите Ваше имя"
+                    class="popup__input popup__input_text_name"
+                    maxlength="35"
+            />
+            <input
+                    type="text"
+                    name="input-vocation"
+                    placeholder="Ваша профессия"
+                    class="popup__input popup__input_text_vocation"
+                    maxlength="35"
+            />
           </div>
-        </div>
-      </main>
+          <button type="submit" class="popup__save">Сохранить</button>
+        </form>
+      </div>
     </div>
-    <script src="./scripts/index.js"></script>
-  </body>
+
+    <div class="window">
+      <div class="window__content">
+        <button type="button" class="window__close"></button>
+        <h3 class="window__title">Новое место</h3>
+        <form class="window__form">
+          <div class="window__text">
+            <input
+                    type="text"
+                    name="input-name-new"
+                    placeholder="Название"
+                    class="window__input window__input_text"
+                    maxlength="35"
+            />
+            <input
+                    type="text"
+                    name="window-src"
+                    placeholder="Ссылка на картинку"
+                    class="window__input window__input_text_src"
+                    maxlength="35"
+            />
+          </div>
+          <button type="submit" class="window__create">Создать</button>
+        </form>
+      </div>
+    </div>
+  </main>
+</div>
+
+<template id="element__template">
+  <li class="elements__content-item">
+
+    <img
+            class="elements__image"
+            src=""
+            alt="Фото"
+    />
+    <button type="button"
+            class="elements__delete-button"
+            id="delete-button"></button>
+    <div class="elements__info">
+      <h2 class="elements__text"></h2>
+      <button
+              type="button"
+              title="Поставить лайк"
+              class="elements__like-button"
+      ></button>
+    </div>
+  </li>
+</template>
+<script src="./scripts/index.js"></script>
+</body>
 </html>
