@@ -1,0 +1,11 @@
+.elements__image {
+  max-width: 282px;
+  height: 282px;
+  object-fit: cover;
+  transition: all 0.2s ease-out;
+}
+
+.elements__image:hover {
+  transform: scale(1.1);
+  cursor: pointer;
+}

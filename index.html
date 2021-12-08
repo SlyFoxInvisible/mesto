@@ -183,41 +183,50 @@
       </div>
     </div>
 
-    <div class="window">
-      <div class="window__content">
+    <div class="popup window">
+      <div class="popup__content ">
         <button type="button" class="window__close"></button>
-        <h3 class="window__title">Новое место</h3>
-        <form class="window__form">
-          <div class="window__text">
+        <h3 class="popup__title ">Новое место</h3>
+        <form class="popup__form window__form">
+          <div class="popup__text ">
             <input
                     type="text"
-                    name="input-name-new"
+                    name="name"
                     placeholder="Название"
-                    class="window__input window__input_text"
+                    class="popup__input window__input_text"
                     maxlength="35"
+                    id="input-window-text"
             />
             <input
                     type="text"
-                    name="window-src"
+                    name="link"
                     placeholder="Ссылка на картинку"
-                    class="window__input window__input_text_src"
-                    maxlength="35"
+                    class="popup__input window__input_text_src"
+
+                    id="input-window-src"
             />
           </div>
-          <button type="submit" class="window__create">Создать</button>
+          <button type="submit" class="popup__create">Создать</button>
         </form>
       </div>
+    </div>
+    <div class="popup__photo">
+      <figure class="popup__photo_content">
+        <button class="popup__photo_button"></button>
+        <img class="popup__photo_image" src="" alt="Фото" id="popup__photo">
+        <figcaption class=" popup__photo_text"></figcaption>
+      </figure>
     </div>
   </main>
 </div>
 
 <template id="element__template">
   <li class="elements__content-item">
-
     <img
+            id="element__image"
             class="elements__image"
             src=""
-            alt="Фото"
+            alt=""
     />
     <button type="button"
             class="elements__delete-button"

@@ -1,0 +1,25 @@
+.popup__create {
+    border: none;
+    background-image: url(../../../images/sumbit_button.svg);
+    width: 358px;
+    height: 50px;
+    background-repeat: no-repeat;
+    padding: 0;
+    border-color: transparent;
+    color: #fff;
+    border-radius: 2px;
+    margin: 0 8.5% 37px 8.5%;
+}
+
+.popup__create:hover {
+    opacity: 0.8;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 768px) {
+    .popup__create {
+        width: 238px;
+        height: 46px;
+        margin: 0 8% 25px 8%;
+    }
+}

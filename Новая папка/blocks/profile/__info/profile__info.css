@@ -1,0 +1,17 @@
+.profile__info {
+    margin: 0;
+    display: grid;
+    grid-template-columns: 1fr 25px;
+    row-gap: 16px;
+    column-gap: 18px;
+    grid-template-areas: "name edit-button" "vocation vocation";
+    align-items: baseline;
+    /*max-width: 282px;*/
+}
+
+@media screen and (max-width: 768px)  {
+    .profile__info {
+        row-gap: 14px;
+        column-gap: 10px;
+    }
+}

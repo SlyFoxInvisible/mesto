@@ -1,0 +1,16 @@
+.popup__photo {
+    font-family: "Inter", Arial, sans-serif;
+    margin: auto;
+    display: none;
+    /*	position: relative;*/
+    font-family: "Inter", Arial, sans-serif;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.9);
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 2;
+}
