@@ -3,7 +3,6 @@
     margin: auto;
     display: flex;
     /*	position: relative;*/
-    font-family: "Inter", Arial, sans-serif;
     align-items: center;
     justify-content: center;
     background-color: rgba(0, 0, 0, 0.9);
@@ -15,7 +14,7 @@
     z-index: 2;
     visibility: hidden;
     opacity: 0;
-    transition: visibility 0s 0.5s, opacity 0.5s ;
+    transition: visibility 0s 0.5s, opacity 0.5s;
 }
 
 
