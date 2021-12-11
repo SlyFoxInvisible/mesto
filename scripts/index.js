@@ -1,15 +1,15 @@
-const profilePopup = document.querySelector('.profile');
-const nameInput = document.querySelector('.popup__input_text_name');
-const jobInput = document.querySelector('.popup__input_text_vocation');
-const editButton = document.querySelector('.profile__save');
+// const profilePopup = document.querySelector('.profile');
+// const nameInput = document.querySelector('.popup__input_text_name');
+// const jobInput = document.querySelector('.popup__input_text_vocation');
+// const editButton = document.querySelector('.profile__save');
 const popupCloseButton = document.querySelector('.popup__close');
-const profileName = document.querySelector('.profile__name');
-const profileDescription = document.querySelector('.profile__vocation');
+// const profileName = document.querySelector('.profile__name');
+// const profileDescription = document.querySelector('.profile__vocation');
 const cardsContainer = document.querySelector('.elements__content');
 const cardNameInput = document.querySelector('.window__input_text');
 const cardLinkInput = document.querySelector('.window__input_text_src');
-//const imagePopup = document.querySelector('.popup__type_image');
-const imagePopupCloseButton = document.querySelector('.window__close');
+// const imagePopup = document.querySelector('.popup__type_image');
+// const imagePopupCloseButton = document.querySelector('.window__close');
 const modalWindow = document.querySelector('.popup');
 const profileEditBtn = document.querySelector('.profile__edit-button');
 const textName = document.querySelector('.profile__info .profile__name');
@@ -17,10 +17,9 @@ const textVocation = document.querySelector('.profile__info .profile__vocation')
 const inputName = document.querySelector('.popup__text .popup__input_text_name');
 const inputVocation = document.querySelector('.popup__text .popup__input_text_vocation');
 const popupWindow = document.querySelector('.window');
-const windowCreateBtn = document.querySelector('.window__form');
+// const windowCreateBtn = document.querySelector('.window__form');
 const profileCreateBtn = document.querySelector('.profile__add-button');
 const popupWindowCloseBtn = document.querySelector('.window__close');
-//const openImagePopup = document.querySelectorAll('.elements__image');
 const imageOpened = document.querySelector('.popup__photo');
 const imageClosedBtn = document.querySelector('.popup__photo_button');
 const imageOpenedText = document.querySelector('.popup__photo_text');
@@ -79,13 +78,6 @@ function createCard (cardName, cardLink){
 
     cardDeleteButton.addEventListener('click', () => card.remove());
 
-
-
-//cardImg.addEventListener('click', (e) => {
-//		e.preventDefault();
-//
-//	})
-
 //Открывает картинку в модальном окне
     function renderCardPopup() {
 
@@ -99,8 +91,7 @@ function createCard (cardName, cardLink){
 
     cardImg.addEventListener('click', renderCardPopup);
 
-    // закрыть поп-ап фото
-//  imagePopupCloseButton.addEventListener('click', () => closePopup(imagePopup));
+
 
 
 
@@ -211,5 +202,5 @@ popupWindowCloseBtn.addEventListener('click', windowCloses);
 
 profileEditBtn.addEventListener('click', toggleModalWindow);
 popupCloseButton.addEventListener('click', toggleModalWindowClose);
-//popupCloseButton.addEventListener('click', () => closePopup(profilePopup));
+
 imageClosedBtn.addEventListener('click', closedImage);
