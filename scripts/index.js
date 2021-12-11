@@ -22,7 +22,7 @@ const profileCreateBtn = document.querySelector('.profile__add-button');
 const popupWindowCloseBtn = document.querySelector('.window__close');
 //const openImagePopup = document.querySelectorAll('.elements__image');
 const imageOpened = document.querySelector('.popup__photo');
-const imageClosed = document.querySelector('.popup__photo_button');
+const imageClosedBtn = document.querySelector('.popup__photo_button');
 const imageOpenedText = document.querySelector('.popup__photo_text');
 const imageOpenedImg = document.querySelector('.popup__photo_image');
 
@@ -97,7 +97,6 @@ function createCard (cardName, cardLink){
 
 
 
-
     cardImg.addEventListener('click', renderCardPopup);
 
     // закрыть поп-ап фото
@@ -110,6 +109,7 @@ function createCard (cardName, cardLink){
 
 function closedImage () {
     imageOpened.classList.remove('popup__photo_opened');
+
 }
 
 
@@ -118,6 +118,7 @@ document.addEventListener('keydown', (evt) => {
     if (evt.key === 'Escape') {
         popupWindow.classList.remove('window_is-opened');
         modalWindow.classList.remove('popup_is-opened');
+        imageOpened.classList.remove('popup__photo_opened');
     }
 })
 
@@ -211,4 +212,4 @@ popupWindowCloseBtn.addEventListener('click', windowCloses);
 profileEditBtn.addEventListener('click', toggleModalWindow);
 popupCloseButton.addEventListener('click', toggleModalWindowClose);
 //popupCloseButton.addEventListener('click', () => closePopup(profilePopup));
-imageClosed.addEventListener('click', closedImage);
+imageClosedBtn.addEventListener('click', closedImage);
