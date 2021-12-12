@@ -25,10 +25,8 @@
                  src="./images/Avatar.svg"
                  alt="Аватар"/>
             <div class="profile__info">
-                <h1 class="profile__name">Жак-Ив
-                    Кусто</h1>
-                <p class="profile__vocation">
-                    Исследователь океана</p>
+                <h1 class="profile__name">Жак-Ив Кусто</h1>
+                <p class="profile__vocation">Исследователь океана</p>
                 <button
                         class="profile__edit-button"
                         type="button"
@@ -87,29 +85,26 @@
         </div>
 
         <div class="popup window">
-            <div
-                    class="popup__content window__content">
+            <div class="popup__content">
                 <button type="button"
                         class="window__close"></button>
-                <h3 class="popup__title ">Новое
+                <h3 class="popup__title">Новое
                     место</h3>
                 <form class="popup__form window__form">
-                    <div
-                            class="popup__text window__input">
+                    <div class="popup__text ">
+                        <input type="text"
+                               name="name"
+                               placeholder="Название"
+                               class="popup__input window__input_text"
+                               maxlength="35"
+                               id="input-window-text"
+                        />
                         <input
                                 type="text"
-                                name="name"
-                                placeholder="Название"
-                                class="popup__input window__input_text"
-                                maxlength="35"
-                                id="input-window-text"
-                        />
-                        <input type="text"
-                               name="link"
-                               placeholder="Ссылка на картинку"
-                               class="popup__input window__input_text_src"
-
-                               id="input-window-src"
+                                name="link"
+                                placeholder="Ссылка на картинку"
+                                class="popup__input window__input_text_src"
+                                id="input-window-src"
                         />
                     </div>
                     <button type="submit"
@@ -119,14 +114,14 @@
                 </form>
             </div>
         </div>
-        <div class="popup__photo">
+        <div class="popup popup__photo">
             <figure class="popup__photo_content">
                 <button class="popup__photo_button"></button>
                 <img class="popup__photo_image"
                      src="#"
                      alt="Фото" id="popup__photo">
                 <figcaption
-                        class="popup__photo_text"></figcaption>
+                        class=" popup__photo_text"></figcaption>
             </figure>
         </div>
     </main>
