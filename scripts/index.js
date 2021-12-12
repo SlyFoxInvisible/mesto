@@ -1,15 +1,8 @@
-// const profilePopup = document.querySelector('.profile');
-// const nameInput = document.querySelector('.popup__input_text_name');
-// const jobInput = document.querySelector('.popup__input_text_vocation');
-// const editButton = document.querySelector('.profile__save');
+
 const popupCloseButton = document.querySelector('.popup__close');
-// const profileName = document.querySelector('.profile__name');
-// const profileDescription = document.querySelector('.profile__vocation');
 const cardsContainer = document.querySelector('.elements__content');
 const cardNameInput = document.querySelector('.window__input_text');
 const cardLinkInput = document.querySelector('.window__input_text_src');
-// const imagePopup = document.querySelector('.popup__type_image');
-// const imagePopupCloseButton = document.querySelector('.window__close');
 const modalWindow = document.querySelector('.popup');
 const profileEditBtn = document.querySelector('.profile__edit-button');
 const textName = document.querySelector('.profile__info .profile__name');
@@ -17,13 +10,12 @@ const textVocation = document.querySelector('.profile__info .profile__vocation')
 const inputName = document.querySelector('.popup__text .popup__input_text_name');
 const inputVocation = document.querySelector('.popup__text .popup__input_text_vocation');
 const popupWindow = document.querySelector('.window');
-// const windowCreateBtn = document.querySelector('.window__form');
 const profileCreateBtn = document.querySelector('.profile__add-button');
 const popupWindowCloseBtn = document.querySelector('.window__close');
-const imageOpened = document.querySelector('.popup__photo');
-const imageClosedBtn = document.querySelector('.popup__photo_button');
-const imageOpenedText = document.querySelector('.popup__photo_text');
-const imageOpenedImg = document.querySelector('.popup__photo_image');
+const imageOpened = document.querySelector('.popup-photo');
+const imageClosedBtn = document.querySelector('.popup-photo__button');
+const imageOpenedText = document.querySelector('.popup-photo__text');
+const imageOpenedImg = document.querySelector('.popup-photo__image');
 
 
 
@@ -81,7 +73,7 @@ function createCard (cardName, cardLink){
 //Открывает картинку в модальном окне
     function renderCardPopup() {
 
-        imageOpened.classList.add('popup__photo_opened');
+        imageOpened.classList.add('popup-photo_opened');
         imageOpenedImg.src = cardImg.src;
         imageOpenedImg.alt = cardImg.alt;
         imageOpenedText.textContent = cardTitle.textContent;
@@ -99,7 +91,7 @@ function createCard (cardName, cardLink){
 }
 
 function closedImage () {
-    imageOpened.classList.remove('popup__photo_opened');
+    imageOpened.classList.remove('popup-photo_opened');
 
 }
 
@@ -109,7 +101,7 @@ document.addEventListener('keydown', (evt) => {
     if (evt.key === 'Escape') {
         popupWindow.classList.remove('window_is-opened');
         modalWindow.classList.remove('popup_is-opened');
-        imageOpened.classList.remove('popup__photo_opened');
+        imageOpened.classList.remove('popup-photo_opened');
     }
 })
 
