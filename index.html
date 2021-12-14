@@ -84,15 +84,18 @@
             </div>
         </div>
 
-        <div class="popup window">
+        <div class="popup" id="window">
             <div
                     class="popup__content window__content">
                 <button type="button"
-                        class="popup__close window__close"></button>
+                        class="popup__close"
+                        id="window__close"
+                ></button>
                 <h3
                         class="popup__title window__title">Новое
                     место</h3>
-                <form class="popup__form window__form">
+                <form
+                        class="popup__form window__form" id="window-form">
                     <div
                             class="popup__text window__text">
                         <input type="text"
@@ -117,7 +120,7 @@
                 </form>
             </div>
         </div>
-        <div class="popup-photo">
+        <div class="popup" id="popup-photo">
             <figure class="popup-photo__content">
                 <button
                         class="popup-photo__button"></button>
