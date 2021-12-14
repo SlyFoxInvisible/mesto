@@ -51,12 +51,15 @@ initialCards.reverse();
 //Функция открытия попапов
 function openPopup(popup){
     popup.classList.add('popup_is-opened');
+    popup.classList.add('window_is-opened');
+    popup.classList.add('popup-photo_opened');
     document.addEventListener('keydown', closeEsc);
 }
 //Функция закрытия попапов
 function closePopup(popup){
     popup.classList.remove('popup_is-opened');
-
+    popup.classList.remove('window_is-opened');
+    popup.classList.remove('popup-photo_opened');
 }
 //Функция для закрытия попапов клавишей Esc
 function closeEsc(evt) {
@@ -95,7 +98,7 @@ function createCard (cardName, cardLink){
 
 function closedImage () {
     // imageOpened.classList.remove('popup-photo_opened');
-        closePopup(imageOpened);
+    closePopup(imageOpened);
 }
 
 // Закрытие попапов по кнопке Escape
@@ -133,11 +136,11 @@ renderCards(initialCards);
 
 
 // Открываем и закрываем окно "Новое место"
-    function windowOpened() {
-        openPopup(popupWindow);
+function windowOpened() {
+    openPopup(popupWindow);
 }
-    function windowCloses() {
-        closePopup(popupWindow);
+function windowCloses() {
+    closePopup(popupWindow);
 }
 
 
@@ -150,7 +153,7 @@ function toggleModalWindow() {
 
 }
 function toggleModalWindowClose() {
-        closePopup(modalWindow);
+    closePopup(modalWindow);
 }
 
 //Кнопка отправки данных на карточке "Редактировать профиль"
