@@ -15,7 +15,7 @@ const imageOpened = document.querySelector('#popup-photo');
 const imageClosedBtn = document.querySelector('.popup-photo__button');
 const imageOpenedText = document.querySelector('.popup-photo__text');
 const imageOpenedImg = document.querySelector('.popup-photo__image');
-
+const elementForm = document.querySelector('.popup__form');
 const cardElementTemplate = document.querySelector('#element__template').content;
 
 // Загрузка карточек на страницу
@@ -134,7 +134,6 @@ function toggleModalWindowClose() {
 }
 
 //Кнопка отправки данных на карточке "Редактировать профиль"
-const elementForm = document.querySelector('.popup__form');
 elementForm.addEventListener('submit', function(e) {
     e.preventDefault();
     textNameProfile.textContent = inputName.value;
