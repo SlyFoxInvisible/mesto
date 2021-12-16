@@ -115,7 +115,7 @@ renderCards(initialCards);
 
 
 
-// Открываем и закрываем окно "Редактировать профиль"
+// Открываем окно "Редактировать профиль"
 function openProfilePopup() {
     openPopup(profilePopup);
     inputName.value = textNameProfile.textContent;
