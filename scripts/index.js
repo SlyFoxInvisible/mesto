@@ -2,7 +2,7 @@ const popupCloseButton = document.querySelector('.popup__close');
 const cardsContainer = document.querySelector('.elements__content');
 const cardNameInput = document.querySelector('.window__input_text');
 const cardLinkInput = document.querySelector('.window__input_text_src');
-const modalPopup = document.querySelector('.popup');
+const profilePopup = document.querySelector('.popup');
 const profileEditBtn = document.querySelector('.profile__edit-button');
 const textNameProfile = document.querySelector('.profile__info .profile__name');
 const textVocation = document.querySelector('.profile__info .profile__vocation');
@@ -93,10 +93,6 @@ function createCard (cardName, cardLink){
     return card;
 }
 
-function closedImage () {
-    closePopup(imageOpened);
-}
-
 // карточка на страницу
 function addCard (newCard) {
     cardsContainer.prepend(newCard);
@@ -113,32 +109,27 @@ renderCards(initialCards);
 
 
 // Открываем и закрываем окно "Новое место"
-function windowOpened() {
     openPopup(popupWindow);
-}
-function windowCloses() {
     closePopup(popupWindow);
-}
+
 
 
 
 // Открываем и закрываем окно "Редактировать профиль"
-function toggleModalWindowOpen() {
-    openPopup(modalPopup);
+function openProfilePopup() {
+    openPopup(profilePopup);
     inputName.value = textNameProfile.textContent;
     inputVocation.value = textVocation.textContent;
 
 }
-function toggleModalWindowClose() {
-    closePopup(modalPopup);
-}
+
 
 //Кнопка отправки данных на карточке "Редактировать профиль"
 elementForm.addEventListener('submit', function(e) {
     e.preventDefault();
     textNameProfile.textContent = inputName.value;
     textVocation.textContent = inputVocation.value;
-    closePopup(modalPopup);
+    closePopup(profilePopup);
 });
 
 
@@ -155,6 +146,6 @@ cardForm.addEventListener('submit', function(event){
 
 profileCreateBtn.addEventListener('click', () => openPopup(popupWindow));
 popupWindowCloseBtn.addEventListener('click', () => closePopup(popupWindow));
-profileEditBtn.addEventListener('click', toggleModalWindowOpen);
-popupCloseButton.addEventListener('click', toggleModalWindowClose);
+profileEditBtn.addEventListener('click', openProfilePopup);
 imageClosedBtn.addEventListener('click', () => closePopup(imageOpened));
+popupCloseButton.addEventListener('click', () => closePopup(profilePopup));
