@@ -107,14 +107,6 @@ function renderCards (array) {
 }
 renderCards(initialCards);
 
-
-// Открываем и закрываем окно "Новое место"
-    openPopup(popupWindow);
-    closePopup(popupWindow);
-
-
-
-
 // Открываем окно "Редактировать профиль"
 function openProfilePopup() {
     openPopup(profilePopup);
