@@ -68,6 +68,8 @@
                                 class="popup__input popup__input_text_name"
                                 maxlength="35"
                         />
+                        <span
+                                class="popup__error" id="input-name-error"></span>
                         <input
                                 type="text"
                                 name="input-vocation"
@@ -75,6 +77,8 @@
                                 class="popup__input popup__input_text_vocation"
                                 maxlength="35"
                         />
+                        <span
+                                class="popup__error" id="input-vocation-error"></span>
                     </div>
                     <button type="submit"
                             class="popup__save">
@@ -106,16 +110,22 @@
                                maxlength="35"
                                id="input-window-text"
                         />
+                        <span
+                                class="popup__error" id="window-input-error"></span>
                         <input
-                                type="text"
+                                type="url"
                                 name="link"
                                 placeholder="Ссылка на картинку"
                                 class="popup__input window__input window__input_text_src"
                                 id="input-window-src"
                         />
+                        <span
+                                class="popup__error" id="window-src-error"></span>
                     </div>
                     <button type="submit"
-                            class="popup__create">
+                            class="popup__create"
+                        id="popup-create-btn"
+                    disabled>
                         Создать
                     </button>
                 </form>
@@ -161,5 +171,6 @@
     </li>
 </template>
 <script src="./scripts/index.js"></script>
+<script src="./scripts/validate.js"></script>
 </body>
 </html>
