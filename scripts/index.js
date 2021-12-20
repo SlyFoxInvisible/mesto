@@ -10,12 +10,16 @@ const inputName = document.querySelector('.popup__text .popup__input_text_name')
 const inputVocation = document.querySelector('.popup__text .popup__input_text_vocation');
 const popupWindow = document.querySelector('#window');
 const profileCreateBtn = document.querySelector('.profile__add-button');
+const saveButton = document.querySelector('#popup-create-btn');
 const popupWindowCloseBtn = document.querySelector('#window__close');
 const imageOpened = document.querySelector('#popup-photo');
 const imageClosedBtn = document.querySelector('.popup-photo__button');
 const imageOpenedText = document.querySelector('.popup-photo__text');
 const imageOpenedImg = document.querySelector('.popup-photo__image');
 const elementForm = document.querySelector('.popup__form');
+const popupOverley = document.querySelector('.popup__overley')
+const windowOverley = document.querySelector('.window__overley');
+const imageOverley = document.querySelector('.popup-photo__overley');
 const cardElementTemplate = document.querySelector('#element__template').content;
 
 // Загрузка карточек на страницу
@@ -136,7 +140,14 @@ cardForm.addEventListener('submit', function(event){
 })
 
 
-profileCreateBtn.addEventListener('click', () => openPopup(popupWindow));
+profileCreateBtn.addEventListener('click', () =>{
+    saveButton.setAttribute('disabled', 'disabled');
+    saveButton.classList.add('popup__save_disabled');
+    openPopup(popupWindow);
+});
+popupOverley.addEventListener('click', () => closePopup(profilePopup));
+windowOverley.addEventListener('click', () => closePopup(popupWindow));
+imageOverley.addEventListener('click', () => closePopup(imageOpened));
 popupWindowCloseBtn.addEventListener('click', () => closePopup(popupWindow));
 profileEditBtn.addEventListener('click', openProfilePopup);
 imageClosedBtn.addEventListener('click', () => closePopup(imageOpened));
