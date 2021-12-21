@@ -75,7 +75,7 @@
                                 type="text"
                                 name="input-name"
                                 placeholder="Укажите Ваше имя"
-                                class="popup__input popup__input_text_name popup__profile-input_text"
+                                class="popup__input popup__input_text_name popup__profile_input_text"
                                 minlength="2"
                                 maxlength="40"
                                 id="input-name"
@@ -88,7 +88,7 @@
                                 type="text"
                                 name="input-vocation"
                                 placeholder="Ваша профессия"
-                                class="popup__input popup__input_text_vocation popup__profile-input_vocation"
+                                class="popup__input popup__input_text_vocation popup__profile_input_vocation"
                                 minlength="2"
                                 maxlength="200"
                                 id="input-vocation"
@@ -106,23 +106,32 @@
             </div>
         </div>
 
-        <div class="popup" id="window">
-            <div class="popup__overley" id="window-overlay"> </div>
-            <div class="popup__content" id="window-content">
-                <form class="popup__form"
+        <div class="popup popup__card"
+             id="window">
+            <div
+                    class="popup__overley popup__card-overley" id="window-overlay"> </div>
+            <div
+                    class="popup__content popup__card-content"
+                 id="window-content">
+                <form
+                        class="popup__form popup__card-form"
                       name="edit-card"
                       id="window-form">
                     <button type="button"
-                            class="popup__close" id="window-close"></button>
-                    <h3 class="popup__title" id="window-title">
+                            class="popup__close popup__card-close" id="window-close"></button>
+                    <h3
+                            class="popup__title popup__card-title"
+                        id="window-title">
                         Новое место</h3>
 
-                    <div class="popup__text" id="window-text">
+                    <div
+                            class="popup__text popup__card-text"
+                         id="window-text">
                         <input
                                 type="text"
                                 name="name-card"
                                 placeholder="Название"
-                                class="popup__input popup__input_text_name"
+                                class="popup__input popup__input_text_name popup__card_input-text"
                                 minlength="2"
                                 maxlength="40"
                                 id="input-window-text"
@@ -135,7 +144,7 @@
                                 type="url"
                                 name="name-card-vocation"
                                 placeholder="Ссылка на картинку"
-                                class="popup__input popup__input_text_vocation"
+                                class="popup__input popup__input_text_vocation popup__card_input_src"
                                 minlength="2"
                                 maxlength="200"
                                 id="input-window-src"
@@ -145,7 +154,7 @@
                                 class="error" id="input-window-src-error"></span>
                     </div>
                     <button type="submit"
-                            class="popup__save"
+                            class="popup__save popup__card-save"
                             id="window-save">
                         Создать
                     </button>
