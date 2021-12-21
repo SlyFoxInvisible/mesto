@@ -53,29 +53,29 @@
             </p>
         </footer>
 
-        <div class="popup popup_profile">
+        <div class="popup profile_popup">
             <div
-                    class="popup__overley popup_profile-overlley" >
+                    class="popup__overley profile_popup-overlley" >
             </div>
             <div
-                    class="popup__content popup_profile-content">
+                    class="popup__content profile_popup-content">
                 <form
-                        class="popup__form popup_profile-form"
+                        class="popup__form profile_popup-form"
                       name="edit__profile"
                       id="popup-form">
                     <button type="button"
-                            class="popup__close popup_profile-close"></button>
+                            class="popup__close profile_popup-close"></button>
                     <h3
-                            class="popup__title popup_profile-title">
+                            class="popup__title profile_popup-title">
                         Редактировать профиль</h3>
 
                     <div
-                            class="popup__text popup_profile-text">
+                            class="popup__text profile_popup-text">
                         <input
                                 type="text"
                                 name="input-name"
                                 placeholder="Укажите Ваше имя"
-                                class="popup__input popup__input_text_name popup_profile_input_text"
+                                class="popup__input popup__input_text_name profile_popup_input_text"
                                 minlength="2"
                                 maxlength="40"
                                 id="input-name"
@@ -88,7 +88,7 @@
                                 type="text"
                                 name="input-vocation"
                                 placeholder="Ваша профессия"
-                                class="popup__input popup__input_text_vocation popup_profile_input_vocation"
+                                class="popup__input popup__input_text_vocation profile_popup_input_vocation"
                                 minlength="2"
                                 maxlength="200"
                                 id="input-vocation"
@@ -98,7 +98,7 @@
                                 class="error" id="input-vocation-error"></span>
                     </div>
                     <button type="submit"
-                            class="popup__save popup_profile-save">
+                            class="popup__save profile_popup-save">
                         Сохранить
                     </button>
                 </form>
@@ -106,32 +106,32 @@
             </div>
         </div>
 
-        <div class="popup popup_card"
+        <div class="popup popup__card"
              id="window">
             <div
-                    class="popup__overley popup_card-overley" id="window-overlay"> </div>
+                    class="popup__overley popup__card-overley" id="window-overlay"> </div>
             <div
-                    class="popup__content popup_card-content"
+                    class="popup__content popup__card-content"
                  id="window-content">
                 <form
-                        class="popup__form popup_card-form"
+                        class="popup__form popup__card-form"
                       name="edit-card"
                       id="window-form">
                     <button type="button"
-                            class="popup__close popup_card-close" id="window-close"></button>
+                            class="popup__close popup__card-close" id="window-close"></button>
                     <h3
-                            class="popup__title popup_card-title"
+                            class="popup__title popup__card-title"
                         id="window-title">
                         Новое место</h3>
 
                     <div
-                            class="popup__text popup_card-text"
+                            class="popup__text popup__card-text"
                          id="window-text">
                         <input
                                 type="text"
                                 name="name-card"
                                 placeholder="Название"
-                                class="popup__input popup__input_text_name popup_card_input-text"
+                                class="popup__input popup__input_text_name popup__card_input-text"
                                 minlength="2"
                                 maxlength="40"
                                 id="input-window-text"
@@ -144,7 +144,7 @@
                                 type="url"
                                 name="name-card-vocation"
                                 placeholder="Ссылка на картинку"
-                                class="popup__input popup__input_text_vocation popup_card_input_src"
+                                class="popup__input popup__input_text_vocation popup__card_input_src"
                                 minlength="2"
                                 maxlength="200"
                                 id="input-window-src"
@@ -154,7 +154,7 @@
                                 class="error" id="input-window-src-error"></span>
                     </div>
                     <button type="submit"
-                            class="popup__save popup_card-save"
+                            class="popup__save popup__card-save"
                             id="window-save">
                         Создать
                     </button>
