@@ -2,7 +2,8 @@ const popupCloseButton = document.querySelector('.popup__close');
 const cardsContainer = document.querySelector('.elements__content');
 const cardNameInput = document.querySelector('#input-window-text');
 const cardLinkInput = document.querySelector('#input-window-src');
-const profilePopup = document.querySelector('.popup');
+const popups = document.querySelectorAll('.popup');
+const profilePopup = document.querySelector('.popup__profile');
 const profileEditBtn = document.querySelector('.profile__edit-button');
 const textNameProfile = document.querySelector('.profile__info .profile__name');
 const textVocation = document.querySelector('.profile__info .profile__vocation');
@@ -21,6 +22,7 @@ const popupOverley = document.querySelector('.popup__overley')
 const imageOverley = document.querySelector('.popup-photo__overley');
 const windowOverlay = document.querySelector('#window-overlay');
 const cardElementTemplate = document.querySelector('#element__template').content;
+const cardForm = document.querySelector('#window-form');
 
 
 // Загрузка карточек на страницу
@@ -79,7 +81,6 @@ function createCard (cardName, cardLink){
     const cardDeleteButton = card.querySelector('.elements__delete-button');
 
     cardTitle.textContent = cardName;
-    cardImg.src = cardName;
     cardImg.src = cardLink;
     cardImg.alt = cardName;
 
@@ -131,13 +132,12 @@ elementForm.addEventListener('submit', function(e) {
 
 
 // заполняем форму, добавляем на старницу
-const cardForm = document.querySelector('#window-form');
 
 cardForm.addEventListener('submit', function(event){
     event.preventDefault();
     const newCard = createCard(cardNameInput.value, cardLinkInput.value);
     addCard(newCard);
-    document.getElementById('window-form').reset();
+    cardForm.reset();
     closePopup(popupWindow);
 })
 
@@ -150,7 +150,15 @@ profileCreateBtn.addEventListener('click', () =>{
 windowOverlay.addEventListener('click', () => closePopup(popupWindow));
 popupOverley.addEventListener('click', () => closePopup(profilePopup));
 imageOverley.addEventListener('click', () => closePopup(imageOpened));
-popupWindowCloseBtn.addEventListener('click', () => closePopup(popupWindow));
 profileEditBtn.addEventListener('click', openProfilePopup);
-imageClosedBtn.addEventListener('click', () => closePopup(imageOpened));
-popupCloseButton.addEventListener('click', () => closePopup(profilePopup));
+
+popups.forEach((popup) => {
+    popup.addEventListener('click', (evt) => {
+        if (evt.target.classList.contains('popup_opened')) {
+            closePopup(popup)
+        }
+        if (evt.target.classList.contains('popup__close')) {
+            closePopup(popup)
+        }
+    })
+})

@@ -53,23 +53,29 @@
             </p>
         </footer>
 
-        <div class="popup">
-            <div class="popup__overley" > </div>
-            <div class="popup__content">
-                <form class="popup__form"
+        <div class="popup popup__profile">
+            <div
+                    class=" popup__overley popup__profile-overlley" >
+            </div>
+            <div
+                    class="popup__content popup__profile-content">
+                <form
+                        class="popup__form popup__profile-form"
                       name="edit__profile"
                       id="popup-form">
                     <button type="button"
-                            class="popup__close"></button>
-                    <h3 class="popup__title">
+                            class="popup__close popup__profile-close"></button>
+                    <h3
+                            class="popup__title popup__profile-title">
                         Редактировать профиль</h3>
 
-                    <div class="popup__text">
+                    <div
+                            class="popup__text popup__profile-text">
                         <input
                                 type="text"
                                 name="input-name"
                                 placeholder="Укажите Ваше имя"
-                                class="popup__input popup__input_text_name"
+                                class="popup__input popup__input_text_name popup__profile-input_text"
                                 minlength="2"
                                 maxlength="40"
                                 id="input-name"
@@ -82,7 +88,7 @@
                                 type="text"
                                 name="input-vocation"
                                 placeholder="Ваша профессия"
-                                class="popup__input popup__input_text_vocation"
+                                class="popup__input popup__input_text_vocation popup__profile-input_vocation"
                                 minlength="2"
                                 maxlength="200"
                                 id="input-vocation"
@@ -92,7 +98,7 @@
                                 class="error" id="input-vocation-error"></span>
                     </div>
                     <button type="submit"
-                            class="popup__save">
+                            class="popup__save popup__profile-save">
                         Сохранить
                     </button>
                 </form>
@@ -153,15 +159,17 @@
             <div class="popup"
                  id="popup-photo">
                 <div
-                        class="popup-photo__overley"></div>
-                <figure class="popup-photo__content">
+                        class="popup__overley popup-photo__overley"></div>
+                <figure
+                        class="popup__image popup-photo__content">
                     <button
-                            class="popup-photo__button"></button>
-                    <img class="popup-photo__image"
+                            class="popup__close popup-photo__button"></button>
+                    <img
+                            class="popup__image popup-photo__image"
                          src="#"
                          alt="Фото" id="popup__photo">
                     <figcaption
-                            class="popup-photo__text"></figcaption>
+                            class="popup__photo-text popup-photo__text"></figcaption>
                 </figure>
             </div>
         </div>
