@@ -10,8 +10,7 @@ const inputName = document.querySelector('.popup__text .popup__input_text_name')
 const inputVocation = document.querySelector('.popup__text .popup__input_text_vocation');
 const popupWindow = document.getElementById('window');
 const profileCreateBtn = document.querySelector('.profile__add-button');
-// const saveButton = document.querySelector('#window-save');
-// const saveButtonCard = document.querySelector('.popup__save');
+const saveButton = document.querySelector('#window-save');
 const popupWindowCloseBtn = document.querySelector('#window-close');
 const imageOpened = document.querySelector('#popup-photo');
 const imageClosedBtn = document.querySelector('.popup-photo__button');
@@ -144,8 +143,8 @@ cardForm.addEventListener('submit', function(event){
 
 
 profileCreateBtn.addEventListener('click', () =>{
-//    saveButton.setAttribute('disabled', 'disabled');
-//    saveButton.classList.add('popup__save_disabled');
+   saveButton.setAttribute('disabled', 'disabled');
+   saveButton.classList.add('popup__save_disabled');
     openPopup(popupWindow);
 });
 windowOverlay.addEventListener('click', () => closePopup(popupWindow));
