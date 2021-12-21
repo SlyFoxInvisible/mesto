@@ -54,14 +54,15 @@
         </footer>
 
         <div class="popup">
-            <div class="popup__overley"> </div>
+            <div class="popup__overley" > </div>
             <div class="popup__content">
                 <form class="popup__form"
-                      name="edit__profile">
-                <button type="button"
-                        class="popup__close"></button>
-                <h3 class="popup__title">
-                    Редактировать профиль</h3>
+                      name="edit__profile"
+                      id="popup-form">
+                    <button type="button"
+                            class="popup__close"></button>
+                    <h3 class="popup__title">
+                        Редактировать профиль</h3>
 
                     <div class="popup__text">
                         <input
@@ -72,6 +73,7 @@
                                 minlength="2"
                                 maxlength="40"
                                 id="input-name"
+                                required
                         />
                         <span
                                 class="error"
@@ -84,6 +86,7 @@
                                 minlength="2"
                                 maxlength="200"
                                 id="input-vocation"
+                                required
                         />
                         <span
                                 class="error" id="input-vocation-error"></span>
@@ -97,72 +100,70 @@
             </div>
         </div>
 
-        <div class="window">
         <div class="popup" id="window">
-    <div class="window__overley"></div>
-            <div
-                    class="popup__content window__content">
-                <form
-                        class="popup__form window__form" id="window-form">
-                <button type="button"
-                        class="popup__close"
-                        id="window__close"
-                ></button>
-                <h3
-                        class="popup__title window__title">Новое
-                    место</h3>
+            <div class="popup__overley" id="window-overlay"> </div>
+            <div class="popup__content" id="window-content">
+                <form class="popup__form"
+                      name="edit-card"
+                      id="window-form">
+                    <button type="button"
+                            class="popup__close" id="window-close"></button>
+                    <h3 class="popup__title" id="window-title">
+                        Новое место</h3>
 
-                    <div
-                            class="popup__text window__text">
-                        <input type="text"
-                               name="name"
-                               placeholder="Название"
-                               class="popup__input window__input window__input_text"
-                               minlength="2"
-                               maxlength="30"
-                               id="input-window-text"
+                    <div class="popup__text" id="window-text">
+                        <input
+                                type="text"
+                                name="name-card"
+                                placeholder="Название"
+                                class="popup__input popup__input_text_name"
+                                minlength="2"
+                                maxlength="40"
+                                id="input-window-text"
+                                required
                         />
                         <span
                                 class="error"
                                 id="input-window-text-error"></span>
                         <input
                                 type="url"
-                                name="link"
+                                name="name-card-vocation"
                                 placeholder="Ссылка на картинку"
-                                class="popup__input window__input window__input_text_src"
+                                class="popup__input popup__input_text_vocation"
+                                minlength="2"
+                                maxlength="200"
                                 id="input-window-src"
+                                required
                         />
                         <span
-                                class="error"
-                                id="input-window-src-error"></span>
+                                class="error" id="input-window-src-error"></span>
                     </div>
                     <button type="submit"
-                            class="popup__create popup__save"
-                        id="popup-create-btn"
-                            disabled
-                    >
+                            class="popup__save"
+                            id="window-save">
                         Создать
                     </button>
                 </form>
-            </div>
+
             </div>
         </div>
+
         <div class="popup-photo">
 
-        <div class="popup"
-             id="popup-photo">
-            <div
-                    class="popup-photo__overley"></div>
-            <figure class="popup-photo__content">
-                <button
-                        class="popup-photo__button"></button>
-                <img class="popup-photo__image"
-                     src="#"
-                     alt="Фото" id="popup__photo">
-                <figcaption
-                        class="popup-photo__text"></figcaption>
-            </figure>
-        </div>
+            <div class="popup"
+                 id="popup-photo">
+                <div
+                        class="popup-photo__overley"></div>
+                <figure class="popup-photo__content">
+                    <button
+                            class="popup-photo__button"></button>
+                    <img class="popup-photo__image"
+                         src="#"
+                         alt="Фото" id="popup__photo">
+                    <figcaption
+                            class="popup-photo__text"></figcaption>
+                </figure>
+            </div>
         </div>
     </main>
 </div>

@@ -1,26 +1,28 @@
 const popupCloseButton = document.querySelector('.popup__close');
 const cardsContainer = document.querySelector('.elements__content');
-const cardNameInput = document.querySelector('.window__input_text');
-const cardLinkInput = document.querySelector('.window__input_text_src');
+const cardNameInput = document.querySelector('#input-window-text');
+const cardLinkInput = document.querySelector('#input-window-src');
 const profilePopup = document.querySelector('.popup');
 const profileEditBtn = document.querySelector('.profile__edit-button');
 const textNameProfile = document.querySelector('.profile__info .profile__name');
 const textVocation = document.querySelector('.profile__info .profile__vocation');
 const inputName = document.querySelector('.popup__text .popup__input_text_name');
 const inputVocation = document.querySelector('.popup__text .popup__input_text_vocation');
-const popupWindow = document.querySelector('#window');
+const popupWindow = document.getElementById('window');
 const profileCreateBtn = document.querySelector('.profile__add-button');
-const saveButton = document.querySelector('#popup-create-btn');
-const popupWindowCloseBtn = document.querySelector('#window__close');
+// const saveButton = document.querySelector('#window-save');
+// const saveButtonCard = document.querySelector('.popup__save');
+const popupWindowCloseBtn = document.querySelector('#window-close');
 const imageOpened = document.querySelector('#popup-photo');
 const imageClosedBtn = document.querySelector('.popup-photo__button');
 const imageOpenedText = document.querySelector('.popup-photo__text');
 const imageOpenedImg = document.querySelector('.popup-photo__image');
-const elementForm = document.querySelector('.popup__form');
+const elementForm = document.querySelector('#popup-form');
 const popupOverley = document.querySelector('.popup__overley')
-const windowOverley = document.querySelector('.window__overley');
 const imageOverley = document.querySelector('.popup-photo__overley');
+const windowOverlay = document.querySelector('#window-overlay');
 const cardElementTemplate = document.querySelector('#element__template').content;
+
 
 // Загрузка карточек на страницу
 const initialCards = [
@@ -105,7 +107,7 @@ function addCard (newCard) {
 // работа с массивом
 function renderCards (array) {
     array.forEach((item) => {
-      const newCard = createCard(item.name, item.link);
+        const newCard = createCard(item.name, item.link);
         addCard(newCard);
     });
 }
@@ -130,7 +132,8 @@ elementForm.addEventListener('submit', function(e) {
 
 
 // заполняем форму, добавляем на старницу
-const cardForm = document.querySelector('.window__form');
+const cardForm = document.querySelector('#window-form');
+
 cardForm.addEventListener('submit', function(event){
     event.preventDefault();
     const newCard = createCard(cardNameInput.value, cardLinkInput.value);
@@ -141,12 +144,12 @@ cardForm.addEventListener('submit', function(event){
 
 
 profileCreateBtn.addEventListener('click', () =>{
-    saveButton.setAttribute('disabled', 'disabled');
-    saveButton.classList.add('popup__save_disabled');
+//    saveButton.setAttribute('disabled', 'disabled');
+//    saveButton.classList.add('popup__save_disabled');
     openPopup(popupWindow);
 });
+windowOverlay.addEventListener('click', () => closePopup(popupWindow));
 popupOverley.addEventListener('click', () => closePopup(profilePopup));
-windowOverley.addEventListener('click', () => closePopup(popupWindow));
 imageOverley.addEventListener('click', () => closePopup(imageOpened));
 popupWindowCloseBtn.addEventListener('click', () => closePopup(popupWindow));
 profileEditBtn.addEventListener('click', openProfilePopup);

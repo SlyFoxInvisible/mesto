@@ -12,30 +12,11 @@ const hideError = (form, input, errorMessageClass, inputErrorClass) => {
     input.classList.remove(inputErrorClass);
 }
 
-
-
-const checkIfInputValid = (form, input, { inputErrorClass, errorClass }) => {
-    if (!input.validity.valid) {
-        showError(form, input, input.validationMessage, errorClass, inputErrorClass);
-    } else {
-        hideError(form, input, errorClass, inputErrorClass);
-    }
-}
-
-const setInputListeners = (form, { inputSelector, submitButtonSelector, inactiveButtonClass, ...rest }) => {
-    const inputs = form.querySelectorAll(inputSelector);
-    const saveButton = form.querySelector(submitButtonSelector);
-
-    inputs.forEach((input) => {
-        input.addEventListener('input', () => {
-            checkIfInputValid(form, input, rest);
-            toggleButtonError(inputs, saveButton,inactiveButtonClass);
-        });
-    });
-}
 const hasInvalidInput = (inputs) => {
     return Array.from(inputs).some((el) => !el.validity.valid);
 }
+
+
 
 const toggleButtonError = (inputs, button, inactiveButtonClass) => {
 
@@ -47,6 +28,26 @@ const toggleButtonError = (inputs, button, inactiveButtonClass) => {
         button.disabled = false;
     }
 }
+const checkIfInputValid = (form, input, { inputErrorClass, errorClass }) => {
+    if (!input.validity.valid) {
+        showError(form, input, input.validationMessage, errorClass, inputErrorClass);
+    } else {
+        hideError(form, input, errorClass, inputErrorClass);
+    }
+}
+
+const setInputListeners = (form, { inputSelector, submitButtonSelector, inactiveButtonClass, ...rest }) => {
+    const inputs = form.querySelectorAll(inputSelector);
+    const submitButton = form.querySelector(submitButtonSelector);
+
+    inputs.forEach((input) => {
+        input.addEventListener('input', () => {
+            checkIfInputValid(form, input, rest);
+            toggleButtonError(inputs, submitButton,inactiveButtonClass);
+        });
+    });
+}
+
 const enableValidation = ({ formSelector, ...rest }) => {
     const forms = document.querySelectorAll(formSelector);
 

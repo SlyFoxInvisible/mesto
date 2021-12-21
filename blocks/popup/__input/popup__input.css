@@ -9,13 +9,13 @@
     width: 100%;
     min-height: 14px;
     padding: 0;
-    margin: 0 8.5% 30px 8.5%;
+    margin: 0 8.5% 13px 8.5%;
     padding-bottom: 13px;
 }
 
-.popup__input:last-of-type {
-    margin-bottom: 48px;
-}
+/*.popup__input:last-of-type {*/
+/*    margin-bottom: 48px;*/
+/*}*/
 
 .popup__input:focus {
     outline: none;
