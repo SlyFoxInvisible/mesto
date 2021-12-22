@@ -2,7 +2,7 @@ const cardsContainer = document.querySelector('.elements__content');
 const cardNameInput = document.querySelector('#input-window-text');
 const cardLinkInput = document.querySelector('#input-window-src');
 const popups = document.querySelectorAll('.popup');
-const profilePopup = document.querySelector('.popup_type_profile');
+const profilePopup = document.querySelector('.popup-profile');
 const profileEditBtn = document.querySelector('.profile__edit-button');
 const textNameProfile = document.querySelector('.profile__info .profile__name');
 const textVocation = document.querySelector('.profile__info .profile__vocation');
@@ -15,9 +15,6 @@ const imageOpened = document.querySelector('#popup-photo');
 const imageOpenedText = document.querySelector('.popup-photo__text');
 const imageOpenedImg = document.querySelector('.popup-photo__image');
 const elementForm = document.querySelector('#popup-form');
-const popupOverley = document.querySelector('.popup__overley')
-const imageOverley = document.querySelector('.popup-photo__overley');
-const windowOverlay = document.querySelector('#window-overlay');
 const cardElementTemplate = document.querySelector('#element__template').content;
 const cardForm = document.querySelector('#window-form');
 
@@ -144,14 +141,12 @@ profileCreateBtn.addEventListener('click', () =>{
    saveButton.classList.add('popup__save_disabled');
     openPopup(popupWindow);
 });
-windowOverlay.addEventListener('click', () => closePopup(popupWindow));
-popupOverley.addEventListener('click', () => closePopup(profilePopup));
-imageOverley.addEventListener('click', () => closePopup(imageOpened));
+
 profileEditBtn.addEventListener('click', openProfilePopup);
 
 popups.forEach((popup) => {
     popup.addEventListener('click', (evt) => {
-        if (evt.target.classList.contains('popup_opened')) {
+        if (evt.target.classList.contains('popup_is-opened')) {
             closePopup(popup)
         }
         if (evt.target.classList.contains('popup__close')) {
