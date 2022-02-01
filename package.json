@@ -1,0 +1,22 @@
+{
+  "name": "yandex_praktikum",
+  "version": "0.0.1",
+  "description": "* GitHub Pages\r * Технологии",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SlyFoxInvisible/mesto.git"
+  },
+  "author": "Vladislav Bakulin",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SlyFoxInvisible/mesto/issues"
+  },
+  "homepage": "https://github.com/SlyFoxInvisible/mesto#readme",
+  "dependencies": {
+    "jquery": "^3.6.0"
+  }
+}

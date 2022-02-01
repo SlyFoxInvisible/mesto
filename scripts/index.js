@@ -1,3 +1,4 @@
+import FormValidator from "./FormValidator";
 const cardsContainer = document.querySelector('.elements__content');
 const cardNameInput = document.querySelector('#input-window-text');
 const cardLinkInput = document.querySelector('#input-window-src');
@@ -137,8 +138,8 @@ cardForm.addEventListener('submit', function(event){
 
 
 profileCreateBtn.addEventListener('click', () =>{
-   saveButton.setAttribute('disabled', 'disabled');
-   saveButton.classList.add('popup__save_disabled');
+    saveButton.setAttribute('disabled', 'disabled');
+    saveButton.classList.add('popup__save_disabled');
     openPopup(popupWindow);
 });
 
@@ -154,3 +155,20 @@ popups.forEach((popup) => {
         }
     })
 })
+
+const enableValidation = ({
+    formSelector: '.popup__form',
+    inputSelector: '.popup__input',
+    submitButtonSelector: '.popup__save',
+    inactiveButtonClass: 'popup__save_disabled',
+    inputErrorClass: 'popup__input_type_error',
+    errorClass: 'popup__error_visible'
+});
+
+
+
+const validateProfilePopup = new FormValidator(enableValidation, profilePopup);
+const validateCardPopup = new FormValidator(enableValidation, popupWindow);
+validateCardPopup.resetValidation();
+validateProfilePopup.enableValidation();
+validateCardPopup.enableValidation();

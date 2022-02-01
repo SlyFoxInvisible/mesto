@@ -1,13 +1,11 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-    <meta charset="UTF-8"/>
-    <meta http-equiv="X-UA-Compatible"
-          content="IE=edge"/>
-    <meta name="viewport"
-          content="width=device-width, initial-scale=1.0"/>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet"
-          href="./pages/index.css"/>
+           href="./pages/index.css" />
     <title>Место</title>
 </head>
 <body class="page">
@@ -21,9 +19,7 @@
     </header>
     <main class="content">
         <section class="profile">
-            <img class="profile__avatar"
-                 src="./images/Avatar.svg"
-                 alt="Аватар"/>
+            <img class="profile__avatar" src="./images/Avatar.svg" alt="Аватар" />
             <div class="profile__info">
                 <h1 class="profile__name">Жак-Ив Кусто</h1>
                 <p class="profile__vocation">Исследователь океана</p>
@@ -40,35 +36,31 @@
             ></button>
         </section>
         <section class="elements">
-            <ul class="elements__content">
-
-            </ul>
+            <ul class="elements__content"></ul>
         </section>
-
 
         <footer class="footer">
             <p class="footer__author">
-                &#169; 2021 Metro Russia Бакулин
-                Владислав
+                &#169; 2021 Metro Russia Бакулин Владислав
             </p>
         </footer>
 
         <div class="popup popup-profile">
-
-            <div
-                    class="popup__content popup-profile__content">
+            <div class="popup__content popup-profile__content">
                 <form
                         class="popup__form popup-profile__form"
                         name="edit__profile"
-                        id="popup-form">
-                    <button type="button"
-                            class="popup__close popup-profile__close"></button>
-                    <h3
-                            class="popup__title popup-profile__title">
-                        Редактировать профиль</h3>
+                        id="popup-form"
+                >
+                    <button
+                            type="button"
+                            class="popup__close popup-profile__close"
+                    ></button>
+                    <h3 class="popup__title popup-profile__title">
+                        Редактировать профиль
+                    </h3>
 
-                    <div
-                            class="popup__text popup-profile__text">
+                    <div class="popup__text popup-profile__text">
                         <input
                                 type="text"
                                 name="input-name"
@@ -79,9 +71,7 @@
                                 id="input-name"
                                 required
                         />
-                        <span
-                                class="error"
-                                id="input-name-error"></span>
+                        <span class="error" id="input-name-error"></span>
                         <input
                                 type="text"
                                 name="input-vocation"
@@ -92,107 +82,100 @@
                                 id="input-vocation"
                                 required
                         />
-                        <span
-                                class="error" id="input-vocation-error"></span>
+                        <span class="error" id="input-vocation-error"></span>
                     </div>
-                    <button type="submit"
-                            class="popup__save popup-profile__save">
+                    <button type="submit" class="popup__save popup-profile__save">
                         Сохранить
                     </button>
                 </form>
-
             </div>
         </div>
 
-        <div class="popup popup-card"
-             id="window">
-        <div
+        <div class="popup popup-card" id="window">
+            <!-- Проверить можно ли безболезнено удалить
+  div ниже
+   -->
 
-        <div
-                class="popup__content popup-card__content"
-                id="window-content">
-            <form
-                    class="popup__form popup-card__form"
-                    name="edit-card"
-                    id="window-form">
-                <button type="button"
-                        class="popup__close popup-card__close" id="window-close"></button>
-                <h3
-                        class="popup__title popup-card__title"
-                        id="window-title">
-                    Новое место</h3>
+            <div
+                    class="popup__content popup-card__content"
+                    id="window-content"
+            >
+                <form
+                        class="popup__form popup-card__form"
+                        name="edit-card"
+                        id="window-form"
+                >
+                    <button
+                            type="button"
+                            class="popup__close popup-card__close"
+                            id="window-close"
+                    ></button>
+                    <h3 class="popup__title popup-card__title" id="window-title">
+                        Новое место
+                    </h3>
 
-                <div
-                        class="popup__text popup-card__text"
-                        id="window-text">
-                    <input
-                            type="text"
-                            name="name-card"
-                            placeholder="Название"
-                            class="popup__input popup__input_text_name popup-card__input-text"
-                            minlength="2"
-                            maxlength="40"
-                            id="input-window-text"
-                            required
-                    />
-                    <span
-                            class="error"
-                            id="input-window-text-error"></span>
-                    <input
-                            type="url"
-                            name="name-card-vocation"
-                            placeholder="Ссылка на картинку"
-                            class="popup__input popup__input_text_vocation popup-card__input-src"
-                            minlength="2"
-                            maxlength="200"
-                            id="input-window-src"
-                            required
-                    />
-                    <span
-                            class="error" id="input-window-src-error"></span>
-                </div>
-                <button type="submit"
-                        class="popup__save popup-card__save"
-                        id="window-save">
-                    Создать
-                </button>
-            </form>
-
+                    <div class="popup__text popup-card__text" id="window-text">
+                        <input
+                                type="text"
+                                name="name-card"
+                                placeholder="Название"
+                                class="popup__input popup__input_text_name popup-card__input-text"
+                                minlength="2"
+                                maxlength="40"
+                                id="input-window-text"
+                                required
+                        />
+                        <span class="error" id="input-window-text-error"></span>
+                        <input
+                                type="url"
+                                name="name-card-vocation"
+                                placeholder="Ссылка на картинку"
+                                class="popup__input popup__input_text_vocation popup-card__input-src"
+                                minlength="2"
+                                maxlength="200"
+                                id="input-window-src"
+                                required
+                        />
+                        <span class="error" id="input-window-src-error"></span>
+                    </div>
+                    <button
+                            type="submit"
+                            class="popup__save popup-card__save"
+                            id="window-save"
+                    >
+                        Создать
+                    </button>
+                </form>
+            </div>
         </div>
-</div>
 
-<div class="popup-photo">
-
-    <div class="popup"
-         id="popup-photo">
-
-        <figure
-                class="popup__image popup-photo__content">
-            <button
-                    class="popup__close popup-photo__button"></button>
-            <img
-                    class="popup__image popup-photo__image"
-                    src="#"
-                    alt="Фото" id="popup__photo">
-            <figcaption
-                    class="popup__photo-text popup-photo__text"></figcaption>
-        </figure>
-    </div>
-</div>
-</main>
+        <div class="popup-photo">
+            <div class="popup" id="popup-photo">
+                <figure class="popup__image popup-photo__content">
+                    <button class="popup__close popup-photo__button"></button>
+                    <img
+                            class="popup__image popup-photo__image"
+                            src="#"
+                            alt="Фото"
+                            id="popup__photo"
+                    />
+                    <figcaption
+                            class="popup__photo-text popup-photo__text"
+                    ></figcaption>
+                </figure>
+            </div>
+        </div>
+    </main>
 </div>
 
 <template id="element__template">
     <li class="elements__content-item">
-        <img
-                id="element__image"
-                class="elements__image"
-                src="#"
-                alt="Фото"
-        />
-        <button type="button"
+        <img id="element__image" class="elements__image" src="#" alt="Фото" />
+        <button
+                type="button"
                 class="elements__delete-button"
-                id="delete-button"></button>
+                id="delete-button"
+        ></button>
         <div class="elements__info">
             <h2 class="elements__text"></h2>
             <button
@@ -203,7 +186,7 @@
         </div>
     </li>
 </template>
-<script src="./scripts/index.js"></script>
-<script src="./scripts/validate.js"></script>
+<script type="module" src="./scripts/index.js"></script>
+<script type="module" src="./scripts/FormValidator.js"></script>
 </body>
 </html>
